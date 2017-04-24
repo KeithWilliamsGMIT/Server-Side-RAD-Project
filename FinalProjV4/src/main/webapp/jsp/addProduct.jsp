@@ -15,7 +15,7 @@
 			<table>
 				<tr>
 					<td><label>Product Description: </label></td>
-					<td><form:input path="pDesc"></form:input></td>
+					<td><form:input path="pDesc"/></td>
 				</tr>
 				<tr>
 					<td><label>Quantity In Stock: </label></td>
@@ -31,7 +31,7 @@
 	</form:form>
 	
 	<a href="/">Home</a>
-	<a href="/listOrders">List Orders</a>
-	<a href="/listProducts">List Products</a>
+	<a href="/showOrders">List Orders</a>
+	<a href="/showProducts">List Products</a>
 </body>
 </html>
