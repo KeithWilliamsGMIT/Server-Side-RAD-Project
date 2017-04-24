@@ -1,6 +1,25 @@
 # Server-Side-RAD-Project
 This is my project for the 3rd year server side RAD module in college. For this project I was required to write a Spring Boot MVC application that allows a logged-in user to manage orders of products for customers.
 
+### Skeleton Project
+A skeleton project was provided to base the application on. The Model for the application consists of three objects:
+
+1. Product
+    + Product ID
+	Description
+	Quantity In Stock
+
+2. Customer
+	+ Customer ID
+	+ Customer Name
+
+3. Order
+	+ Order ID
+	+ Order Quantity
+	+ Order Date
+
+These models were given in the skeleton code for the project and their dependencies already set up.
+
 ### Setup
 This project was developed using Eclipse Neon JEE. This project requires the following to be installed in Eclipse
 + Maven Integration for Eclipse (Luna and newer) 1.5
