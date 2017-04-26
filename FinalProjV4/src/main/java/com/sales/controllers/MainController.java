@@ -14,12 +14,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.sales.models.Customer;
 import com.sales.models.Product;
 import com.sales.services.ProductService;
+import com.sales.services.CustomerService;
 
 @Controller
 public class MainController {
 	@Autowired
 	@Qualifier("ProductService")
 	private ProductService productService;
+	
+	@Autowired
+	@Qualifier("CustomerService")
+	private CustomerService customerService;
 	
 	// Products
 	@RequestMapping(value="/showProducts", method=RequestMethod.GET)
@@ -45,7 +50,8 @@ public class MainController {
 	
 	// Customers
 	@RequestMapping(value="/showCustomers", method=RequestMethod.GET)
-	public String getShowCustomers() {
+	public String getShowCustomers(Model model) {
+		model.addAttribute("Customers", customerService.getCustomers());
 		return "showCustomers";
 	}
 	
@@ -59,6 +65,7 @@ public class MainController {
 		if (result.hasErrors()) {
 			return "addCustomer";
 		} else {
+			customerService.addCustomer(customer);
 			return "redirect:showCustomers";
 		}
 	}
