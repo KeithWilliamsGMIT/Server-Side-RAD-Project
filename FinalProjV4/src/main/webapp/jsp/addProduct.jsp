@@ -16,10 +16,12 @@
 				<tr>
 					<td><label>Product Description: </label></td>
 					<td><form:input path="pDesc"/></td>
+					<td><form:errors path="pDesc"></form:errors></td>
 				</tr>
 				<tr>
 					<td><label>Quantity In Stock: </label></td>
 					<td><form:input path="qtyInStock"/></td>
+					<td><form:errors path="qtyInStock"></form:errors></td>
 				</tr>
 				<tr>
 					<td>
