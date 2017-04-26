@@ -8,20 +8,15 @@
 <title>SS RAD Final Project</title>
 </head>
 <body>
-	<h2>Add New product</h2>
+	<h2>Add New Customer</h2>
 	
-	<form:form modelAttribute="Product">
+	<form:form modelAttribute="Customer">
 		<form>
 			<table>
 				<tr>
-					<td><label>Product Description: </label></td>
-					<td><form:input path="pDesc"/></td>
-					<td><form:errors path="pDesc"></form:errors></td>
-				</tr>
-				<tr>
-					<td><label>Quantity In Stock: </label></td>
-					<td><form:input path="qtyInStock"/></td>
-					<td><form:errors path="qtyInStock"></form:errors></td>
+					<td><label>Cust Name: </label></td>
+					<td><form:input path="cName"/></td>
+					<td><form:errors path="cName"></form:errors></td>
 				</tr>
 				<tr>
 					<td>

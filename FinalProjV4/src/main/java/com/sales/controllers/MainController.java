@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.sales.models.Customer;
 import com.sales.models.Product;
 import com.sales.services.ProductService;
 
@@ -20,6 +21,7 @@ public class MainController {
 	@Qualifier("ProductService")
 	private ProductService productService;
 	
+	// Products
 	@RequestMapping(value="/showProducts", method=RequestMethod.GET)
 	public String getShowProducts(Model model) {
 		model.addAttribute("Products", productService.getProducts());
@@ -38,6 +40,26 @@ public class MainController {
 		} else {
 			productService.addProduct(product);
 			return "redirect:showProducts";
+		}
+	}
+	
+	// Customers
+	@RequestMapping(value="/showCustomers", method=RequestMethod.GET)
+	public String getShowCustomers() {
+		return "showCustomers";
+	}
+	
+	@RequestMapping(value="/addCustomer", method=RequestMethod.GET)
+	public String getAddCustomer(@ModelAttribute ("Customer") Customer customer) {
+		return "addCustomer";
+	}
+	
+	@RequestMapping(value="/addCustomer", method=RequestMethod.POST)
+	public String postAddProduct(@Valid @ModelAttribute ("Customer") Customer customer, BindingResult result) {
+		if (result.hasErrors()) {
+			return "addCustomer";
+		} else {
+			return "redirect:showCustomers";
 		}
 	}
 }
