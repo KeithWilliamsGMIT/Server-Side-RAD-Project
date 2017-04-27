@@ -8,7 +8,7 @@
 <title>SS RAD Final Project</title>
 </head>
 <body>
-	<h2>Add New Customer</h2>
+	<h1>Add New Customer</h1>
 	
 	<form:form modelAttribute="Customer">
 		<form>

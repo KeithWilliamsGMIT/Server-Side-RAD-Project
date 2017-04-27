@@ -8,20 +8,25 @@
 <title>SS RAD Final Project</title>
 </head>
 <body>
-	<h1>Add New product</h1>
+	<h1>Add New Order</h1>
 	
-	<form:form modelAttribute="Product">
+	<form:form modelAttribute="Order">
 		<form>
 			<table>
 				<tr>
-					<td><label>Product Description: </label></td>
-					<td><form:input path="pDesc"/></td>
-					<td><form:errors path="pDesc"></form:errors></td>
+					<td><label>Customer ID: </label></td>
+					<td><form:input path="cust"/></td>
+					<td><form:errors path="cust"></form:errors></td>
 				</tr>
 				<tr>
-					<td><label>Quantity In Stock: </label></td>
-					<td><form:input path="qtyInStock"/></td>
-					<td><form:errors path="qtyInStock"></form:errors></td>
+					<td><label>Product ID: </label></td>
+					<td><form:input path="prod"/></td>
+					<td><form:errors path="prod"></form:errors></td>
+				</tr>
+				<tr>
+					<td><label>Quantity: </label></td>
+					<td><form:input path="qty"/></td>
+					<td><form:errors path="qty"></form:errors></td>
 				</tr>
 				<tr>
 					<td>
@@ -33,7 +38,7 @@
 	</form:form>
 	
 	<a href="/">Home</a>
-	<a href="/showOrders">List Orders</a>
+	<a href="/showCustomers">List Customers</a>
 	<a href="/showProducts">List Products</a>
 </body>
 </html>

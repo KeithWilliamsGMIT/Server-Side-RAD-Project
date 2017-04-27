@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.sales.models.Customer;
+import com.sales.models.Order;
 import com.sales.models.Product;
 import com.sales.services.ProductService;
 import com.sales.services.CustomerService;
@@ -67,6 +68,26 @@ public class MainController {
 		} else {
 			customerService.addCustomer(customer);
 			return "redirect:showCustomers";
+		}
+	}
+	
+	// Orders
+	@RequestMapping(value="/showOrders", method=RequestMethod.GET)
+	public String getShowOrders() {
+		return "showOrders";
+	}
+	
+	@RequestMapping(value="/addOrder", method=RequestMethod.GET)
+	public String getAddCustomer(@ModelAttribute ("Order") Order order) {
+		return "addOrder";
+	}
+	
+	@RequestMapping(value="/addOrder", method=RequestMethod.POST)
+	public String postAddProduct(@Valid @ModelAttribute ("Order") Order order, BindingResult result) {
+		if (result.hasErrors()) {
+			return "addOrder";
+		} else {
+			return "redirect:showOrders";
 		}
 	}
 }

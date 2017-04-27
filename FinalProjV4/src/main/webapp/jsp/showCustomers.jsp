@@ -10,12 +10,16 @@
 <body>
 
 </body>
-	<h2>List of Customers</h2>
+	<h1>List of Customers</h1>
 	
 	<c:forEach var="customer" items="${Customers}">
 		<h2>
 			<c:out value="${customer.cId} ${customer.cName}"/>
 		</h2>
+		
+		<h3>
+			<c:out value="${customer.cName}'s Orders"/>
+		</h3>
 		
 		<table>
 			<tr>
@@ -29,7 +33,7 @@
 	
 	<a href="/">Home</a>
 	<a href="/addCustomer">Add Customer</a>
-	<a href="/showProducts">List Product</a>
+	<a href="/showProducts">List Products</a>
 	<a href="/showOrders">List Orders</a>
 	<a>Logout</a>
 </html>
