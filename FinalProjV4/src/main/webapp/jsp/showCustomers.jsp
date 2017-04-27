@@ -28,6 +28,15 @@
 				<th>Product ID</th>
 				<th>Description</th>
 			</tr>
+			
+			<c:forEach var="order" items="${customer.orders}">
+				<tr>
+					<td><c:out value="${order.oId}"/></td>
+					<td><c:out value="${order.qty}"/></td>
+					<td><c:out value="${order.prod.pId}"/></td>
+					<td><c:out value="${order.prod.pDesc}"/></td>
+				</tr>
+			</c:forEach>
 		</table>
 	</c:forEach>
 	
