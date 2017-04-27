@@ -16,9 +16,11 @@ import com.sales.models.Order;
 import com.sales.models.Product;
 import com.sales.services.ProductService;
 import com.sales.services.CustomerService;
+import com.sales.services.OrderService;
 
 @Controller
 public class MainController {
+	// Services
 	@Autowired
 	@Qualifier("ProductService")
 	private ProductService productService;
@@ -26,6 +28,10 @@ public class MainController {
 	@Autowired
 	@Qualifier("CustomerService")
 	private CustomerService customerService;
+	
+	@Autowired
+	@Qualifier("OrderService")
+	private OrderService orderService;
 	
 	// Products
 	@RequestMapping(value="/showProducts", method=RequestMethod.GET)
@@ -73,7 +79,8 @@ public class MainController {
 	
 	// Orders
 	@RequestMapping(value="/showOrders", method=RequestMethod.GET)
-	public String getShowOrders() {
+	public String getShowOrders(Model model) {
+		model.addAttribute("Orders", orderService.getOrders());
 		return "showOrders";
 	}
 	
@@ -87,6 +94,8 @@ public class MainController {
 		if (result.hasErrors()) {
 			return "addOrder";
 		} else {
+			order.setOrderDate(new java.sql.Date(new java.util.Date().getTime()).toString());
+			orderService.addOrder(order);
 			return "redirect:showOrders";
 		}
 	}
