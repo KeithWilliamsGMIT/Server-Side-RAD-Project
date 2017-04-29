@@ -44,5 +44,5 @@
 	<a href="/addCustomer">Add Customer</a>
 	<a href="/showProducts">List Products</a>
 	<a href="/showOrders">List Orders</a>
-	<a>Logout</a>
+	<a href="/logout">Logout</a>
 </html>

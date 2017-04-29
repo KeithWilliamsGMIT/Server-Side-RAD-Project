@@ -12,6 +12,8 @@
 	
 	<form:form modelAttribute="Product">
 		<form>
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+			
 			<table>
 				<tr>
 					<td><label>Product Description: </label></td>

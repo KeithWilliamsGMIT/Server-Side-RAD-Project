@@ -12,6 +12,8 @@
 	
 	<form:form modelAttribute="Customer">
 		<form>
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+			
 			<table>
 				<tr>
 					<td><label>Cust Name: </label></td>

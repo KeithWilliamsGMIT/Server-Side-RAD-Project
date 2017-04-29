@@ -37,5 +37,5 @@
 	<a href="/">Home</a>
 	<a href="/addProduct">Add Product</a>
 	<a href="/showOrders">List Orders</a>
-	<a>Logout</a>
+	<a href="/logout">Logout</a>
 </html>
