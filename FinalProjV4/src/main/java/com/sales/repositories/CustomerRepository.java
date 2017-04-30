@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.sales.models.Customer;
 
 @Repository
-public interface CustomerRepository extends CrudRepository<Customer, Long> { }
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
+	public Customer findByCId(long cId);
+}

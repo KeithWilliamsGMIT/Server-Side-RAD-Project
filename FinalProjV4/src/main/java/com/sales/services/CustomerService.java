@@ -17,6 +17,10 @@ public class CustomerService {
 		customerRepository.save(customer);
 	}
 	
+	public Customer getCustomer(long cId) {
+		return (Customer) customerRepository.findByCId(cId);
+	}
+	
 	public ArrayList<Customer> getCustomers() {
 		return (ArrayList<Customer>) customerRepository.findAll();
 	}

@@ -17,13 +17,13 @@
 			<table>
 				<tr>
 					<td><label>Customer ID: </label></td>
-					<td><form:input path="cust"/></td>
-					<td><form:errors path="cust"></form:errors></td>
+					<td><form:input path="cust.cId"/></td>
+					<td><form:errors path="cust.cId"></form:errors></td>
 				</tr>
 				<tr>
 					<td><label>Product ID: </label></td>
-					<td><form:input path="prod"/></td>
-					<td><form:errors path="prod"></form:errors></td>
+					<td><form:input path="prod.pId"/></td>
+					<td><form:errors path="prod.pId"></form:errors></td>
 				</tr>
 				<tr>
 					<td><label>Quantity: </label></td>
