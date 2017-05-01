@@ -26,7 +26,7 @@ This project was developed using Eclipse Neon JEE. This project requires the fol
 + Spring IDE 3.8.4.RELEASE
 + EGit (Optional)
 
-To install these go to help in the Eclipse menubar and select Eclipse Marketplace. Then search for these in the search bar provided. This project also requires a WAMP to be started and an empty database called `sales` to be created.
+To install these go to help in the Eclipse menubar and select Eclipse Marketplace. Then search for these in the search bar provided. This project also requires WAMP to be started and an empty database called `sales` to be created.
 
 ### Running the application
 To run the application, right click on the poject in the solution explorer and click Run As -> Spring Boot App. The application will then be available at [http://localhost:8080/](http://localhost:8080/). An account is provided which has a username of "user" and a password of "user".
