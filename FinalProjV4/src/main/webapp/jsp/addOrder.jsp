@@ -8,7 +8,7 @@
 <title>SS RAD Final Project</title>
 </head>
 <body>
-	<h1>Add New Order</h1>
+	<h1>New Order</h1>
 	
 	<form:form modelAttribute="Order">
 		<form>
@@ -18,12 +18,10 @@
 				<tr>
 					<td><label>Customer ID: </label></td>
 					<td><form:input path="cust.cId"/></td>
-					<td><form:errors path="cust.cId"></form:errors></td>
 				</tr>
 				<tr>
 					<td><label>Product ID: </label></td>
 					<td><form:input path="prod.pId"/></td>
-					<td><form:errors path="prod.pId"></form:errors></td>
 				</tr>
 				<tr>
 					<td><label>Quantity: </label></td>
